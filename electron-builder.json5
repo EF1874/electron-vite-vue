@@ -8,6 +8,23 @@
   "directories": {
     "output": "release/${version}"
   },
+  "extraFiles": [
+    {
+      "from": "electron/env/python/${platform}",
+      "to": "electron/env/python/${platform}",
+      "filter": ["**/*"]
+    },
+    {
+      "from": "electron/py-scripts",
+      "to": "electron/py-scripts",
+      "filter": ["**/*"]
+    },
+    {
+      "from": "electron/public",
+      "to": "electron/public",
+      "filter": ["**/*"]
+    }
+  ],
   "files": [
     "dist-electron",
     "dist"
